@@ -1,5 +1,4 @@
-// console.log(module);
-var logger = require('./logger');
+const path= require('path');
 
-// console.log(logger);
-logger.log('Hell bitch');
+var pathObj= path.parse(__filename);
+console.log(pathObj);
