@@ -1,11 +1,12 @@
-const os= require('os');
+const fs= require('fs');
 
-const totalMemory= os.totalmem();
-const freeMemory= os.freemem();
+//synchronous files reading
+// const files= fs.readdirSync('./');
+// console.log(files);
 
-console.log('Total Memory', totalMemory);
-// console.log('Free Memory', freeMemory);
+//asynchronous file reading
+fs.readdir('./', function(err, files) {
+    if(err) console.log('error: ', err);
+    else console.log('Result: ', files);
+});
 
-//Template string
-console.log(`Total Memory: ${totalMemory}`); 
-console.log(`Free Memory: ${freeMemory}`); 
