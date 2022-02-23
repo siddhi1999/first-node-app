@@ -1,10 +1,14 @@
-const EventEmitter = require('events');
-const emitter= new EventEmitter();
+    const emitter= require('./logger');
+    emitter.emit('messageLogged', {data: 'message'});
+    
 
-//Register a Listener. we can also use addListener intead of on
-emitter.on('messageLogged', function (arg) {
-    console.log('Listener called', arg);
-});
+// const EventEmitter = require('events');
+// const emitter= new EventEmitter();
 
-//Raise an event
-emitter.emit('messageLogged', {id: 1, url: 'http://'});
+// //Register a Listener. we can also use addListener intead of on
+// emitter.on('messageLogged', function (arg) {
+//     console.log('Listener called', arg);
+// });
+
+// //Raise an event
+// emitter.emit('messageLogged', {id: 1, url: 'http://'});
