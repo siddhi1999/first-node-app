@@ -1,1 +1,1 @@
-# first-node-app
+# node-app
